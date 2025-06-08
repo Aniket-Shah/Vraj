@@ -1,0 +1,181 @@
+:root {
+    --bgColor: #323031;
+    --textColor: #F2F7F2;
+    --btnColor-hover: #0F8B8D;
+    --btnColor: #467F97;
+    --highLightColor: #CBA328;
+    --sectionBgColor: #5F5B6B;
+  }
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+}
+body{
+    overflow-x: hidden;
+    color: var(--textColor);
+    background-color: var(--bgColor);
+}
+#nav{
+    background-color: var(--bgColor);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;   
+    padding: 35px 24px ;
+    position: fixed;
+    width: 100%;
+    height: 10%;
+}
+#cursor{
+    height: 14px;
+    width: 14px;
+    border-radius: 50%;
+    background-color: var(--highLightColor);
+    position: fixed;
+    z-index: 99;
+
+}
+#nav-links a{
+    color: var(--textColor);
+    text-decoration: none;
+    padding: 0px 24px;
+    font-weight: 400;
+}
+
+#contactCTA{
+    padding: 10px 24px;
+    background-color: var(--btnColor);
+    color: var(--textColor);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 8px;
+}
+
+#contactCTA:hover{
+    background-color: var(--btnColor-hover);
+}
+
+#page1{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#sloganArea{
+    width: 750px;
+    text-align: center;
+    padding: 20px;
+}
+#sloganArea h1{
+    line-height: 50px;
+    font-weight: 400;
+    font-size: 45px;
+    padding-bottom: 10px;
+}
+#sloganArea p{
+    font-weight: 200;
+    font-size: 14px;    
+}
+#meetCald{
+    color: var(--textColor);
+    background-color: var(--bgColor);
+    padding: 10px 24px;
+    color: var(--textColor);
+    border: 1px solid var(--highLightColor);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 8px;
+}
+
+#meetCald:hover{
+    background-color: var(--textColor);
+    color: var(--bgColor);
+}
+
+#page2{
+    margin-bottom: 50px;
+    height: 45vh;
+    width: 100%;
+    display: flex;
+    align-items: end;
+    justify-content: space-around;
+}
+
+
+#page2 #card1{
+    height: 320px;
+    width: 240px;
+    border-radius: 16px;
+    background-image: url('../images/plastics.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+#page2 #card2{
+    height: 280px;
+    width: 210px;
+    border-radius: 16px;
+    background-color: var(--btnColor);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+#page2 #card2 h3{
+    font-size: 35px;
+}
+#page2 #card2 p{
+    font-size: 12px;
+}
+
+#page2 #card3{
+    background-color: var(--textColor);
+    height: 210px;
+    width: 280px;
+    border-radius: 16px;
+    color: var(--bgColor);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 14px 16px;
+}
+#page2 #card3 h3{
+    font-size: 35px;
+}
+#page2 #card3 p{
+    font-size: 12px;
+}
+
+
+#page2 #card4{
+    height: 280px;
+    width: 210px;
+    border-radius: 16px;
+    background-color: var(--btnColor-hover);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+#page2 #card4 h3{
+    font-size: 35px;
+}
+#page2 #card4 p{
+    font-size: 12px;
+}
+#page2 #card5{
+    height: 320px;
+    width: 240px;
+    border-radius: 16px;
+    background-image: url('../images/paint.jpg');
+    background-size: cover;
+    background-position: center;
+}
