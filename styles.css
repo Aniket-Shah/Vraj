@@ -2,7 +2,8 @@
   --bgColor: #323031;
   --textColor: #F2F7F2;
   --btnColor: #467F97;
-  --btnColor-hover: #0F8B8D;
+  --btnColor-hover: #97f8fa;
+  --btnTextColor: #323031;
   --highLightColor: #CBA328;
   --sectionBgColor: #5F5B6B;
 }
@@ -42,6 +43,7 @@ button {
 
 .btn-primary:hover {
   background: var(--btnColor-hover);
+  color: var(--btnTextColor);
 }
 
 .btn-outline {
