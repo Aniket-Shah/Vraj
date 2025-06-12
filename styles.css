@@ -1,8 +1,9 @@
 :root {
     --bgColor: #323031;
     --textColor: #F2F7F2;
-    --btnColor-hover: #0F8B8D;
+    --btnColor-hover: #F2F7F2;
     --btnColor: #467F97;
+    --btnTextColor: #323031;
     --highLightColor: #CBA328;
     --sectionBgColor: #5F5B6B;
   }
@@ -57,6 +58,7 @@ body{
 
 #contactCTA:hover{
     background-color: var(--btnColor-hover);
+    color: var(--btnTextColor);
 }
 
 #page1{
@@ -95,8 +97,8 @@ body{
 }
 
 #meetCald:hover{
-    background-color: var(--textColor);
-    color: var(--bgColor);
+    background-color: var(--btnColor-hover);
+    color: var(--btnTextColor);
 }
 
 #page2{
