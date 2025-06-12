@@ -225,3 +225,8 @@ display: flex;
 justify-content: center;
 align-items: center;
 }
+#category4 {
+    width: 150px;
+    height: 150px;
+    background: url('images/Logo.png') no-repeat center center;
+}
