@@ -24,10 +24,18 @@ function loadHTML(id, file) {
 }
 
 function loadCSS(href) {
-  const link = document.createElement("link");
-  link.rel = "stylesheet";
-  link.href = href;
-  document.head.appendChild(link);
+  fetch(href)
+    .then((res) => {
+      if (res.ok && res.headers.get("Content-Type").includes("text/css")) {
+        const link = document.createElement("link");
+        link.rel = "stylesheet";
+        link.href = href;
+        document.head.appendChild(link);
+      } else {
+        console.warn("CSS not found or wrong type:", href);
+      }
+    })
+    .catch((err) => console.error("Failed to load CSS:", href, err));
 }
 
 function initHeroEvents() {
