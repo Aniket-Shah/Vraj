@@ -20,3 +20,41 @@
         </div>
     </div>
 </section>
+
+<script>
+    document.getElementById("meetCald").addEventListener("click", function () {
+        const title = encodeURIComponent("Client Meeting");
+        const details = encodeURIComponent("Agenda: Discuss project updates");
+        const location = encodeURIComponent("Google Meet");
+    
+        // Get current IST time
+        const now = new Date();
+        const utcOffset = now.getTimezoneOffset(); // in minutes
+        const istOffset = 330; // IST is UTC+5:30 => 330 minutes
+        const diffMinutes = istOffset - utcOffset;
+        now.setMinutes(now.getMinutes() + diffMinutes);
+    
+        // Set meeting time between 12 PM – 6 PM IST
+        let meetingHour = now.getHours();
+        if (meetingHour < 12) meetingHour = 12;
+        else if (meetingHour >= 18) meetingHour = 12; // next day
+        else meetingHour += 1;
+    
+        const start = new Date(now);
+        start.setHours(meetingHour, 0, 0, 0);
+    
+        const end = new Date(start);
+        end.setHours(start.getHours() + 1); // 1-hour meeting
+    
+        const startTime = start.toISOString().replace(/-|:|\.\d\d\d/g, "");
+        const endTime = end.toISOString().replace(/-|:|\.\d\d\d/g, "");
+    
+        // Add fixed guests
+        const guests = encodeURIComponent("aniketshah2407@gmail.com");
+    
+        const calendarUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&details=${details}&location=${location}&dates=${startTime}/${endTime}&add=${guests}&sf=true&output=xml`;
+    
+        window.open(calendarUrl, "_blank");
+    });
+    </script>
+    
