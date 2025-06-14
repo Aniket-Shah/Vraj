@@ -1,0 +1,29 @@
+#page3 {
+    padding: 60px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+}
+
+#aboutUsImage {
+    flex: 1.5 1 200px;
+    height: 400px;
+    background-color: crimson;
+    border-radius: 28px;
+}
+
+#aboutUsText {
+    flex: 1 1 300px;
+    max-width: 600px;
+}
+
+#aboutUsText h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+#aboutUsText p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}

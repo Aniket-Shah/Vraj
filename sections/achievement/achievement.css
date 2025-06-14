@@ -1,0 +1,17 @@
+#page2 {
+    padding: 60px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    border-radius: 16px;
+    padding: 20px;
+    flex: 1 1 240px;
+    max-width: 280px;
+    background-color: var(--btnColor);
+    text-align: center;
+    color: var(--textColor);
+}
