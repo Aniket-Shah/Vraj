@@ -50,6 +50,7 @@
 
 @media screen and (max-width: 768px) {
     .hamburger {
+        margin-right: 10%;
         display: flex;
     }
 
