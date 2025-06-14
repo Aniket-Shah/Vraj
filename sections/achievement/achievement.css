@@ -1,17 +1,24 @@
 #page2 {
-    padding: 60px 20px;
+    padding: 0px 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
+    @media screen and (min-width: 480px) {
+        padding: 60px 20px;
+    }
 }
 
 .card {
     border-radius: 16px;
     padding: 20px;
-    flex: 1 1 240px;
-    max-width: 280px;
+    flex: 1 1 320px;
+    max-width: 320px;
     background-color: var(--btnColor);
     text-align: center;
     color: var(--textColor);
+    @media screen and (min-width: 480px) {
+        flex: 1 1 240px;
+        max-width: 280px;
+    }
 }

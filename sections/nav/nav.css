@@ -6,13 +6,20 @@
     position: fixed;
     width: 100%;
     z-index: 99;
+    padding: 10px 25px;
+    @media screen and (min-width: 480px) {
+        padding: 0px 15px;
+    }
 }
 #logo{
     background: url("../../images/Logo.png") no-repeat center center;
     background-size: cover;
     width: 100px;
     height: 100px;
-    margin-left: 5%;
+    margin-left: 0%;
+    @media screen and (min-width: 480px) {
+        margin-left: 5%;
+    }
 }
 #nav-links {
     display: flex;
