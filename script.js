@@ -1,5 +1,6 @@
-// var crsr = document.querySelector("#cursor")
-// document.addEventListener("mousemove", function (dets) {
-//     crsr.style.left = dets.x-5 + "px";
-//     crsr.style.top = dets.y-1 + "px";
-// });
+function toggleMenu() {
+    const navLinks = document.getElementById('nav-links');
+    const hamburger = document.getElementById('hamburger');
+    navLinks.classList.toggle('active');
+    hamburger.classList.toggle('active');
+}
