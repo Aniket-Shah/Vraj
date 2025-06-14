@@ -22,6 +22,14 @@
 </section>
 
 <script>
+    document.getElementById("contactCTA").addEventListener("click", function () {
+        // const phoneNumber = "919892258188"; // Replace with your WhatsApp number (with country code, no +)
+        // const message = encodeURIComponent("Hi");
+        // const whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
+        // window.open(whatsappURL, '_blank');
+        const shortLink = "https://bit.ly/yourShortenedLink"; // replace with your Bitly or TinyURL
+        window.open(shortLink, "_blank");
+    });
     document.getElementById("meetCald").addEventListener("click", function () {
         const title = encodeURIComponent("Client Meeting");
         const details = encodeURIComponent("Agenda: Discuss project updates");
