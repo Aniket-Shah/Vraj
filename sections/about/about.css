@@ -1,9 +1,12 @@
 #page3 {
-    padding: 60px 20px;
+    padding: 30px 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 50px;
+    @media screen and (min-width: 480px) {
+        padding: 60px 20px;
+    }
 }
 
 #aboutUsImage {
