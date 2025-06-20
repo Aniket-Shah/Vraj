@@ -7,10 +7,13 @@
     width: 100%;
     z-index: 99;
     padding: 10px 10px;
+    top: 0;
+    transition: opacity 0.2s ease;
     @media screen and (min-width: 480px) {
         padding: 10px 25px;
     }
 }
+
 #logo{
     background: url("../../images/Logo.png") no-repeat center center;
     background-size: cover;
@@ -57,6 +60,11 @@
 }
 
 @media screen and (max-width: 768px) {
+    #nav.hidden {
+        opacity: 0;
+        pointer-events: none;
+    }
+
     .hamburger {
         /* margin-right: 10%; */
         display: flex;
@@ -83,6 +91,7 @@
         border-top: 1px solid #444;
     }
 }
+
 
 .hamburger.active span:nth-child(1) {
     transform: rotate(45deg) translate(7.5px, 7.5px);
