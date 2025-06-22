@@ -4,7 +4,8 @@ function toggleMenu() {
     navLinks.classList.toggle('active');
     hamburger.classList.toggle('active');
 }
-function loadHTML(id, file) {
+
+function loadHTML(id, file, callback) {
   fetch(file)
     .then((res) => {
       if (!res.ok) throw new Error(`Failed to load ${file}`);
@@ -17,7 +18,10 @@ function loadHTML(id, file) {
       const cssFile = file.replace(".html", ".css");
       loadCSS(cssFile);
 
-      // Initialize script logic after HTML is inserted
+      // Run callback if provided
+      if (callback) callback();
+
+      // Custom logic after specific component loads
       if (id === "include-hero") initHeroEvents();
     })
     .catch((err) => console.error(err));
@@ -82,12 +86,36 @@ function initHeroEvents() {
   }
 }
 
+function fadeHeaderOnScroll(headerId) {
+  let header = document.getElementById(headerId);
+
+  if (!header) {
+    setTimeout(() => fadeHeaderOnScroll(headerId), 100);
+    return;
+  }
+
+  let lastScrollTop = 0;
+
+  window.addEventListener('scroll', function () {
+    const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (currentScroll > lastScrollTop) {
+      header.classList.add('hidden');
+    } else {
+      header.classList.remove('hidden');
+    }
+
+    lastScrollTop = Math.max(currentScroll, 0);
+  });
+}
+
 // Load components
-loadHTML("include-nav", "sections/nav/nav.html");
+loadHTML("include-nav", "sections/nav/nav.html", function () {
+  fadeHeaderOnScroll('nav'); // Run after nav is loaded
+});
 loadHTML("include-hero", "sections/hero/hero.html");
 loadHTML("include-achievement", "sections/achievement/achievement.html");
 loadHTML("include-about", "sections/about/about.html");
 loadHTML("include-category", "sections/category/category.html");
+loadHTML("include-footer", "sections/footer/footer.html");
 
-  
-  
