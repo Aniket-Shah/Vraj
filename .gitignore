@@ -6,7 +6,8 @@ npm-debug.log*
 
 # Windows "downloaded from the internet" metadata, created beside every file copied
 # out of a browser download into the design-reference folders.
-*:Zone.Identifier
+# WSL maps the colon in the Windows stream name to U+F03A, so match on the suffix only.
+*Zone.Identifier
 
 # Incremental TypeScript build state — machine-local, changes on every compile.
 tsconfig.tsbuildinfo
