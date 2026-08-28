@@ -2,6 +2,7 @@ import { appendFile, mkdir, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 import { randomUUID } from "node:crypto";
 import { company, addressOneLine } from "@/data/company";
+import { siteUrl } from "@/lib/utils";
 
 /**
  * Lead delivery.
@@ -327,7 +328,7 @@ export async function deliverLead(
   if (process.env.LEAD_RELAY_URL) {
     // FormSubmit refuses a post that carries no browser origin, so a server-to-server
     // call has to present one explicitly.
-    const origin = process.env.NEXT_PUBLIC_SITE_URL ?? "https://vrajchem.com";
+    const origin = siteUrl;
 
     channels.push(
       fetch(process.env.LEAD_RELAY_URL, {

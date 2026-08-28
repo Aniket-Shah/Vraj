@@ -1,7 +1,27 @@
 import type { Metadata } from "next";
 import { company } from "@/data/company";
 
-export const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://vrajchem.com";
+/**
+ * Canonical origin for metadata, canonical links, the sitemap and structured data.
+ *
+ * A variable that is unset and one set to an empty string have to behave identically.
+ * Vercel stores a blank value as "" rather than omitting the key, and `??` falls back
+ * only on null or undefined — so a blank NEXT_PUBLIC_SITE_URL reached `new URL("")`
+ * and failed the production build outright.
+ */
+function resolveSiteUrl() {
+  const explicit = process.env.NEXT_PUBLIC_SITE_URL?.trim();
+  if (explicit) return explicit.replace(/\/+$/, "");
+
+  // Vercel exposes the deployment host with no scheme. It is the right answer for a
+  // preview or a demo that has no custom domain attached yet.
+  const deployment = process.env.NEXT_PUBLIC_VERCEL_URL?.trim();
+  if (deployment) return `https://${deployment.replace(/^https?:\/\//, "").replace(/\/+$/, "")}`;
+
+  return "https://vrajchem.com";
+}
+
+export const siteUrl = resolveSiteUrl();
 
 export function cn(...classes: Array<string | false | null | undefined>) {
   return classes.filter(Boolean).join(" ");

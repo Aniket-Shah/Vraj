@@ -5,6 +5,7 @@ import { NavStickyMinimal } from "@/components/layout/NavStickyMinimal";
 import { FloatingContactBar } from "@/components/layout/FloatingContactBar";
 import { LeadCaptureModal } from "@/components/forms/LeadCaptureModal";
 import { company } from "@/data/company";
+import { siteUrl } from "@/lib/utils";
 import "./globals.css";
 
 /** Headings — the face used throughout the approved screens. */
@@ -32,7 +33,7 @@ const mono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://vrajchem.com"),
+  metadataBase: new URL(siteUrl),
   title: {
     default: `${company.legalName} | Industrial Chemical Stockist & Exporter`,
     template: `%s | ${company.legalName}`
