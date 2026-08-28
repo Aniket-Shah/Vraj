@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Vraj Chem Impex - Industrial Chemicals</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&amp;family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&amp;family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "inverse-primary": "#aec7fd",
+                      "surface": "#f8f9ff",
+                      "secondary-container": "#8af5be",
+                      "surface-container-highest": "#d3e4fe",
+                      "on-surface-variant": "#44474f",
+                      "on-error-container": "#93000a",
+                      "error-container": "#ffdad6",
+                      "tertiary-fixed-dim": "#e9c349",
+                      "tertiary-container": "#cca830",
+                      "primary-container": "#0f2c59",
+                      "inverse-surface": "#213145",
+                      "surface-tint": "#465e8e",
+                      "surface-container": "#e5eeff",
+                      "error": "#ba1a1a",
+                      "outline-variant": "#c4c6d0",
+                      "inverse-on-surface": "#eaf1ff",
+                      "secondary-fixed": "#8df7c1",
+                      "secondary": "#006c47",
+                      "outline": "#747780",
+                      "on-primary": "#ffffff",
+                      "on-primary-fixed": "#001a41",
+                      "surface-container-high": "#dce9ff",
+                      "tertiary-fixed": "#ffe088",
+                      "on-secondary-fixed-variant": "#005235",
+                      "surface-container-lowest": "#ffffff",
+                      "on-tertiary": "#ffffff",
+                      "on-background": "#0b1c30",
+                      "on-primary-container": "#7c94c8",
+                      "primary-fixed-dim": "#aec7fd",
+                      "on-tertiary-container": "#4f3e00",
+                      "surface-variant": "#d3e4fe",
+                      "primary": "#00173b",
+                      "on-secondary-container": "#00714b",
+                      "secondary-fixed-dim": "#71dba6",
+                      "surface-dim": "#cbdbf5",
+                      "on-surface": "#0b1c30",
+                      "tertiary": "#735c00",
+                      "on-tertiary-fixed-variant": "#574500",
+                      "primary-fixed": "#d8e2ff",
+                      "on-secondary": "#ffffff",
+                      "on-secondary-fixed": "#002113",
+                      "surface-container-low": "#eff4ff",
+                      "on-tertiary-fixed": "#241a00",
+                      "surface-bright": "#f8f9ff",
+                      "background": "#f8f9ff",
+                      "on-primary-fixed-variant": "#2d4674",
+                      "on-error": "#ffffff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "margin-desktop": "48px",
+                      "container-max": "1440px",
+                      "gutter": "24px",
+                      "data-row-height": "48px",
+                      "margin-mobile": "16px",
+                      "unit": "4px"
+              },
+              "fontFamily": {
+                      "body-lg": ["Inter"],
+                      "display-lg": ["Hanken Grotesk"],
+                      "label-caps": ["Inter"],
+                      "data-mono": ["JetBrains Mono"],
+                      "headline-md": ["Hanken Grotesk"],
+                      "body-sm": ["Inter"],
+                      "headline-sm": ["Hanken Grotesk"],
+                      "body-md": ["Inter"]
+              },
+              "fontSize": {
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                      "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                      "data-mono": ["13px", {"lineHeight": "16px", "fontWeight": "500"}],
+                      "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                      "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                      "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+              }
+            }
+          }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .icon-fill {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md antialiased selection:bg-tertiary-container selection:text-on-tertiary-container pt-12 pb-20">
+<!-- TopAppBar from JSON -->
+<header class="flex justify-between items-center px-margin-mobile h-12 w-full fixed top-0 z-50 bg-primary dark:bg-primary-container border-b border-outline-variant">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-on-primary dark:text-on-primary-container" data-icon="biotech">biotech</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-primary dark:text-on-primary-container">Vraj Chem Impex</span>
+</div>
+<div>
+<button class="font-label-caps text-label-caps text-secondary-fixed font-bold hover:bg-primary-container/20 transition-colors px-3 py-1 rounded-full border border-secondary-fixed">
+                RFQ
+            </button>
+</div>
+</header>
+<main class="flex flex-col gap-8 w-full max-w-[100vw] overflow-x-hidden">
+<!-- Hero Section with Search -->
+<section class="relative w-full bg-primary-container text-on-primary-container pt-10 pb-12 px-margin-mobile flex flex-col gap-6 overflow-hidden">
+<div class="absolute inset-0 opacity-10 pointer-events-none" data-alt="A highly detailed microscopic view of crystalline chemical structures forming a geometric grid pattern. The aesthetic is clinical, modern, and professional, rendered in deep peacock blues and subtle gold accents. High-contrast lighting highlights the sharp edges of the technical elements, creating a B2B industrial vibe." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC07PLLMErfkMhU1WIGjgkVLCKc75nQTsfPq24FpVNj2J-O1Xx_4zj4xbOFtVZJSXYR8Ov2C4yuF3aQlq0-2q0ReDMlC2vZfDQQ0Kf09RkMSyAfe-q482m0kS8lrKsnitBmcUYLCsRbITOVyEjsZGqRpWfh70CvUm_bDR8L51S_FgWSudw8nDRkmoRoW4iEZX4_BxyOgJdoRj10B1MXGlQI7XjYf5xg-CvZnnxMHatLp1Y_haIp2yJdnA')"></div>
+<div class="relative z-10 flex flex-col gap-4">
+<h1 class="font-headline-md text-headline-md text-surface-lowest">
+                    Your Trusted Partner in <br/>
+<span class="text-tertiary-fixed-dim">Industrial &amp; Specialty</span><br/>
+                    Chemical Solutions
+                </h1>
+<p class="font-body-md text-body-md text-surface-variant max-w-sm">
+                    Verified wholesale distribution with end-to-end compliance tracking.
+                </p>
+</div>
+<!-- Dynamic Search Bar -->
+<div class="relative z-10 mt-2 w-full bg-surface-container-lowest rounded-lg border border-outline-variant flex items-center px-4 py-3 shadow-sm focus-within:border-tertiary-fixed-dim transition-colors">
+<span class="material-symbols-outlined text-outline mr-3">search</span>
+<input class="w-full bg-transparent border-none focus:ring-0 font-body-md text-body-md text-on-surface placeholder:text-outline p-0" placeholder="Search CAS No, Product Name..." type="text"/>
+<button class="ml-2 bg-tertiary-container text-on-tertiary-container rounded p-1 flex items-center justify-center hover:bg-tertiary-fixed transition-colors">
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</section>
+<!-- Trust Badges Section -->
+<section class="px-margin-mobile">
+<div class="flex gap-4 overflow-x-auto pb-4 snap-x hide-scrollbar">
+<!-- Badge 1 -->
+<div class="flex-shrink-0 flex items-center gap-3 bg-surface-container-low border border-outline-variant rounded-lg p-3 snap-start min-w-[200px]">
+<div class="bg-primary-container text-on-primary-container p-2 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-sm icon-fill">verified</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-outline">GSTIN</span>
+<span class="font-data-mono text-data-mono text-on-surface">27AATFV1194R1Z0</span>
+</div>
+</div>
+<!-- Badge 2 -->
+<div class="flex-shrink-0 flex items-center gap-3 bg-surface-container-low border border-outline-variant rounded-lg p-3 snap-start min-w-[200px]">
+<div class="bg-secondary-container text-on-secondary-container p-2 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-sm icon-fill">receipt_long</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-outline">Compliance</span>
+<span class="font-data-mono text-data-mono text-on-surface">E-Invoice Enabled</span>
+</div>
+</div>
+<!-- Badge 3 -->
+<div class="flex-shrink-0 flex items-center gap-3 bg-surface-container-low border border-outline-variant rounded-lg p-3 snap-start min-w-[160px]">
+<div class="bg-tertiary-container text-on-tertiary-container p-2 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-sm icon-fill">star</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-outline">Rating</span>
+<span class="font-data-mono text-data-mono text-on-surface">883 Verified</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Quick RFQ Lead Capture -->
+<section class="px-margin-mobile">
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-5 shadow-sm">
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-tertiary-fixed-dim">bolt</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Quick RFQ</h2>
+</div>
+<form class="flex flex-col gap-4">
+<div class="flex flex-col gap-1">
+<label class="font-body-sm text-body-sm text-on-surface-variant">Requirement Details</label>
+<textarea class="w-full bg-surface border border-outline-variant rounded-lg px-3 py-2 font-body-md text-body-md focus:border-primary-container focus:ring-1 focus:ring-primary-container transition-colors resize-none" placeholder="E.g., 500kg Acetic Acid, technical grade..." rows="2"></textarea>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-body-sm text-body-sm text-on-surface-variant">Company Email or Phone</label>
+<input class="w-full bg-surface border border-outline-variant rounded-lg px-3 py-2 font-body-md text-body-md focus:border-primary-container focus:ring-1 focus:ring-primary-container transition-colors" placeholder="Contact details for quote" type="text"/>
+</div>
+<button class="mt-2 w-full bg-tertiary-container text-on-tertiary-container font-headline-sm text-headline-sm font-bold rounded-lg py-3 hover:bg-tertiary-fixed transition-colors flex items-center justify-center gap-2" type="button">
+                        Request Quote
+                        <span class="material-symbols-outlined text-sm">send</span>
+</button>
+<p class="font-body-sm text-body-sm text-outline text-center mt-2 text-[11px]">Standard response time: &lt; 2 hours.</p>
+</form>
+</div>
+</section>
+<!-- Footer Component from JSON -->
+<footer class="w-full py-8 px-margin-mobile flex flex-col items-center gap-4 bg-surface-container-lowest dark:bg-surface-container border-t border-outline-variant mt-4 pb-24">
+<span class="font-headline-sm text-headline-sm text-primary">Vraj Chem Impex</span>
+<div class="flex flex-wrap justify-center gap-4">
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary underline" href="#">Privacy Policy</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary underline" href="#">Terms of Service</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary underline" href="#">Pharma Compliance</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary underline" href="#">Contact Support</a>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-center opacity-80 mt-2">© 2024 Vraj Chem Impex LLP. LLPIN: AAT-2573 | GSTIN: 27AATFV1194R1Z0</p>
+</footer>
+</main>
+<!-- BottomNavBar from JSON (Mobile Shell) -->
+<nav class="fixed bottom-0 w-full z-50 flex justify-around items-center h-16 px-4 bg-surface border-t border-outline-variant shadow-sm pb-safe">
+<!-- Active Tab: Catalog (Assuming Home Intent) -->
+<button class="flex flex-col items-center justify-center bg-secondary-container text-on-secondary-container rounded-full px-4 py-1 Active: scale-95 transition-transform duration-150">
+<span class="material-symbols-outlined icon-fill" data-icon="inventory_2">inventory_2</span>
+<span class="font-label-caps text-label-caps mt-1">Catalog</span>
+</button>
+<!-- Inactive Tab: RFQs -->
+<button class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="request_quote">request_quote</span>
+<span class="font-label-caps text-label-caps mt-1">RFQs</span>
+</button>
+<!-- Inactive Tab: Profile -->
+<button class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+<span class="font-label-caps text-label-caps mt-1">Profile</span>
+</button>
+</nav>
+<style>
+        /* Utility to hide scrollbar for horizontal scrolling badge container */
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</body></html>

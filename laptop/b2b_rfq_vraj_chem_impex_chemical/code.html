@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Request for Quotation (RFQ) - Vraj Chem Impex LLP</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@600;700&amp;family=Inter:wght@400;500;700&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary": "#735c00",
+                        "primary-fixed": "#d8e2ff",
+                        "on-secondary-fixed-variant": "#005235",
+                        "error": "#ba1a1a",
+                        "surface-dim": "#cbdbf5",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-variant": "#d3e4fe",
+                        "inverse-on-surface": "#eaf1ff",
+                        "surface-tint": "#465e8e",
+                        "on-tertiary": "#ffffff",
+                        "secondary-fixed": "#8df7c1",
+                        "surface-container-high": "#dce9ff",
+                        "surface-bright": "#f8f9ff",
+                        "on-primary-fixed-variant": "#2d4674",
+                        "surface": "#f8f9ff",
+                        "secondary": "#006c47",
+                        "tertiary-fixed-dim": "#e9c349",
+                        "on-tertiary-container": "#4f3e00",
+                        "on-surface-variant": "#44474f",
+                        "inverse-surface": "#213145",
+                        "secondary-container": "#8af5be",
+                        "on-primary-container": "#7c94c8",
+                        "primary-container": "#0f2c59",
+                        "on-tertiary-fixed-variant": "#574500",
+                        "on-secondary-container": "#00714b",
+                        "secondary-fixed-dim": "#71dba6",
+                        "on-primary": "#ffffff",
+                        "on-surface": "#0b1c30",
+                        "outline": "#747780",
+                        "surface-container-highest": "#d3e4fe",
+                        "on-tertiary-fixed": "#241a00",
+                        "outline-variant": "#c4c6d0",
+                        "on-secondary": "#ffffff",
+                        "surface-container": "#e5eeff",
+                        "on-error-container": "#93000a",
+                        "on-secondary-fixed": "#002113",
+                        "on-error": "#ffffff",
+                        "inverse-primary": "#aec7fd",
+                        "tertiary-container": "#cca830",
+                        "background": "#f8f9ff",
+                        "on-background": "#0b1c30",
+                        "primary": "#00173b",
+                        "surface-container-low": "#eff4ff",
+                        "on-primary-fixed": "#001a41",
+                        "tertiary-fixed": "#ffe088",
+                        "primary-fixed-dim": "#aec7fd",
+                        "error-container": "#ffdad6"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "data-row-height": "48px",
+                        "margin-mobile": "16px",
+                        "unit": "4px",
+                        "container-max": "1440px",
+                        "margin-desktop": "48px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Hanken Grotesk"],
+                        "label-caps": ["Inter"],
+                        "headline-sm": ["Hanken Grotesk"],
+                        "body-sm": ["Inter"],
+                        "display-lg": ["Hanken Grotesk"],
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "data-mono": ["JetBrains Mono"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700" }],
+                        "headline-sm": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "data-mono": ["13px", { "lineHeight": "16px", "fontWeight": "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .form-input {
+            border: 1px solid #CBD5E1;
+            transition: all 0.2s ease;
+        }
+        .form-input:focus {
+            border-color: #00173b; /* primary */
+            outline: none;
+            box-shadow: 0 0 0 1px #00173b;
+        }
+        .hover-lift {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .hover-lift:hover {
+            transform: translateY(-2px);
+            box-shadow: 0px 4px 12px rgba(15, 44, 89, 0.08);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased min-h-screen flex flex-col">
+<!-- TopNavBar (Shared Component) -->
+<header class="bg-surface dark:bg-inverse-surface border-b border-outline-variant dark:border-outline flat no shadows docked full-width top-0 z-50">
+<div class="flex justify-between items-center w-full px-margin-desktop max-w-container-max mx-auto h-data-row-height px-margin-mobile md:px-margin-desktop">
+<div class="bg-primary p-2 rounded-lg flex items-center justify-center h-10 w-auto"><img alt="Vraj Chem Impex LLP Logo" class="h-full w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBz3Mn7Cmci0L3pvGpexEa2WOB_khvntZ5QLBucP5U4GPUMBbJi04Utbm5c7kRzwNxpGxyaiT2xqunvRzYPj-1hy7VdYLJ9t8kZ3RYhFIIjkfTws7Lo6mS2SIBivXmozPFGGT4o2_3fXrnqu3EgM4xSFgcpWAtTCf37I-3MwYWsldlU1ZkE2wy6H65dwGBYHI96m9w5i12n_T1X6baoQtTgbeA0Vvz7vNTTb4YTzAFq94ChNG55-bXEGPeLTV_RsD2Re2w"/></div>
+<nav class="hidden md:flex gap-gutter items-center">
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors duration-200" href="#">Categories</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors duration-200" href="#">APIs</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors duration-200" href="#">Biologicals</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors duration-200" href="#">Compliance</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors duration-200" href="#">About Us</a>
+</nav>
+<div class="flex items-center gap-unit">
+<button class="font-label-caps text-label-caps text-on-surface-variant dark:text-surface-variant hidden md:block px-4 py-2 hover:bg-surface-variant rounded-DEFAULT transition-colors">GSTIN/LLPIN Utility</button>
+<button class="font-label-caps text-label-caps bg-primary text-on-primary px-4 py-2 rounded-DEFAULT scale-95 active:scale-90 transition-transform">Request a Quote</button>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12">
+<!-- Page Header -->
+<div class="mb-12 border-b border-outline-variant pb-6">
+<h1 class="font-display-lg text-display-lg text-primary mb-2">Request for Quotation (RFQ)</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Submit your bulk chemical requirement for a formal quote within 2 hours.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Left Form Area -->
+<div class="lg:col-span-8 bg-surface-container-lowest border border-outline-variant rounded-xl p-8 hover-lift">
+<form action="#" class="space-y-8" method="POST">
+<!-- Section: Contact & Company Info -->
+<div>
+<h2 class="font-headline-sm text-headline-sm text-primary mb-4 border-b border-surface-variant pb-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">business</span>
+                            Company Details
+                        </h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block font-body-sm text-body-sm text-on-surface-variant mb-1" for="company_name">Company Name *</label>
+<input class="form-input w-full rounded-DEFAULT p-2 font-body-md text-body-md bg-transparent" id="company_name" name="company_name" required="" type="text"/>
+</div>
+<div>
+<label class="block font-body-sm text-body-sm text-on-surface-variant mb-1" for="buyer_category">Buyer Category *</label>
+<select class="form-input w-full rounded-DEFAULT p-2 font-body-md text-body-md bg-transparent" id="buyer_category" name="buyer_category" required="">
+<option disabled="" selected="" value="">Select Category</option>
+<option value="manufacturing">Manufacturing</option>
+<option value="trading">Trading</option>
+<option value="distributor">Wholesale Distributor</option>
+<option value="research">Research Institution</option>
+</select>
+</div>
+<div>
+<label class="block font-body-sm text-body-sm text-on-surface-variant mb-1" for="contact_name">Contact Person *</label>
+<input class="form-input w-full rounded-DEFAULT p-2 font-body-md text-body-md bg-transparent" id="contact_name" name="contact_name" required="" type="text"/>
+</div>
+<div>
+<label class="block font-body-sm text-body-sm text-on-surface-variant mb-1" for="email">Email Address *</label>
+<input class="form-input w-full rounded-DEFAULT p-2 font-body-md text-body-md bg-transparent" id="email" name="email" required="" type="email"/>
+</div>
+<div>
+<label class="block font-body-sm text-body-sm text-on-surface-variant mb-1" for="phone">Phone Number *</label>
+<input class="form-input w-full rounded-DEFAULT p-2 font-body-md text-body-md bg-transparent" id="phone" name="phone" required="" type="tel"/>
+</div>
+</div>
+</div>
+<!-- Section: Compliance Details -->
+<div>
+<h2 class="font-headline-sm text-headline-sm text-primary mb-4 border-b border-surface-variant pb-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">verified</span>
+                            Compliance Details
+                        </h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block font-body-sm text-body-sm text-on-surface-variant mb-1" for="gstin">GSTIN *</label>
+<input class="form-input w-full rounded-DEFAULT p-2 font-data-mono text-data-mono bg-transparent uppercase" id="gstin" name="gstin" required="" type="text"/>
+</div>
+<div>
+<label class="block font-body-sm text-body-sm text-on-surface-variant mb-1" for="target_delivery">Target Delivery Date *</label>
+<input class="form-input w-full rounded-DEFAULT p-2 font-data-mono text-data-mono bg-transparent uppercase" id="target_delivery" name="target_delivery" required="" type="date"/>
+</div>
+</div>
+</div>
+<!-- Section: Order Requirements -->
+<div>
+<h2 class="font-headline-sm text-headline-sm text-primary mb-4 border-b border-surface-variant pb-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">science</span>
+                            Order Requirements
+                        </h2>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<div class="md:col-span-6">
+<label class="block font-body-sm text-body-sm text-on-surface-variant mb-1" for="chemical_name">Chemical Name / CAS No *</label>
+<input class="form-input w-full rounded-DEFAULT p-2 font-body-md text-body-md bg-transparent" id="chemical_name" name="chemical_name" required="" type="text"/>
+</div>
+<div class="md:col-span-3">
+<label class="block font-body-sm text-body-sm text-on-surface-variant mb-1" for="quantity">Required Volume *</label>
+<input class="form-input w-full rounded-DEFAULT p-2 font-data-mono text-data-mono bg-transparent text-right" id="quantity" name="quantity" required="" type="number"/>
+</div>
+<div class="md:col-span-3">
+<label class="block font-body-sm text-body-sm text-on-surface-variant mb-1" for="packaging">Packaging Requirement *</label>
+<select class="form-input w-full rounded-DEFAULT p-2 font-body-md text-body-md bg-transparent" id="packaging" name="packaging" required="">
+<option disabled="" selected="" value="">Select</option>
+<option value="mt">MT</option>
+<option value="drums">Drums</option>
+<option value="liters">Liters</option>
+</select>
+</div>
+</div>
+</div>
+<!-- Section: File Upload -->
+<div>
+<h2 class="font-headline-sm text-headline-sm text-primary mb-4 border-b border-surface-variant pb-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">upload_file</span>
+                            Supporting Documents
+                        </h2>
+<div class="border-2 border-dashed border-outline-variant rounded-xl p-8 text-center bg-surface-container-low hover:bg-surface-container transition-colors cursor-pointer" id="drop-zone">
+<span class="material-symbols-outlined text-outline text-4xl mb-2">cloud_upload</span>
+<p class="font-body-md text-body-md text-on-surface-variant mb-1">Drag and drop your Purchase Order (PO) or requirement list here</p>
+<p class="font-body-sm text-body-sm text-outline mb-4">Supported formats: PDF, DOCX, XLSX (Max 10MB)</p>
+<label class="font-label-caps text-label-caps bg-surface text-primary border border-primary px-4 py-2 rounded-DEFAULT cursor-pointer hover:bg-surface-variant transition-colors" for="file_upload">Browse Files</label>
+<input accept=".pdf,.doc,.docx,.xls,.xlsx" class="hidden" id="file_upload" type="file"/>
+</div>
+</div>
+<div class="pt-6">
+<button class="w-full bg-tertiary-container text-on-tertiary-container font-headline-sm text-headline-sm py-4 rounded-xl hover:opacity-90 active:scale-95 transition-all shadow-sm" type="submit">
+                            Submit Bulk RFQ
+                        </button>
+</div>
+</form>
+</div>
+<!-- Right Sidebar: Value Proposition -->
+<aside class="lg:col-span-4">
+<div class="bg-primary text-on-primary rounded-xl p-6 sticky top-24 shadow-md">
+<h3 class="font-headline-md text-headline-md mb-6 border-b border-on-primary-fixed-variant pb-4">Why Partner with Vraj Chem Impex?</h3>
+<ul class="space-y-6">
+<li class="flex items-start gap-4">
+<div class="bg-surface-tint/20 p-2 rounded-full mt-1">
+<span class="material-symbols-outlined text-secondary-fixed" style="font-variation-settings: 'FILL' 1;">receipt_long</span>
+</div>
+<div>
+<h4 class="font-body-lg text-body-lg font-bold mb-1 text-primary-fixed">E-Invoice Compliant</h4>
+<p class="font-body-sm text-body-sm text-on-primary/80">Streamlined billing with strict adherence to the latest GST and E-invoicing mandates.</p>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<div class="bg-surface-tint/20 p-2 rounded-full mt-1">
+<span class="material-symbols-outlined text-secondary-fixed" style="font-variation-settings: 'FILL' 1;">public</span>
+</div>
+<div>
+<h4 class="font-body-lg text-body-lg font-bold mb-1 text-primary-fixed">Global Sourcing Network</h4>
+<p class="font-body-sm text-body-sm text-on-primary/80">Access to a wide range of high-quality chemicals sourced from reliable international and domestic partners.</p>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<div class="bg-surface-tint/20 p-2 rounded-full mt-1">
+<span class="material-symbols-outlined text-secondary-fixed" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<div>
+<h4 class="font-body-lg text-body-lg font-bold mb-1 text-primary-fixed">Quality Assured</h4>
+<p class="font-body-sm text-body-sm text-on-primary/80">Every batch comes with Certificate of Analysis (COA) to guarantee chemical purity and grade specifications.</p>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<div class="bg-surface-tint/20 p-2 rounded-full mt-1">
+<span class="material-symbols-outlined text-secondary-fixed" style="font-variation-settings: 'FILL' 1;">support_agent</span>
+</div>
+<div>
+<h4 class="font-body-lg text-body-lg font-bold mb-1 text-primary-fixed">Dedicated Procurement Support</h4>
+<p class="font-body-sm text-body-sm text-on-primary/80">Direct access to experienced B2B account managers for complex sourcing requirements.</p>
+</div>
+</li>
+</ul>
+</div>
+</aside>
+</div>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="bg-primary dark:bg-primary-container text-on-primary dark:text-on-primary-container w-full py-12 px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter max-w-container-max mx-auto mt-auto">
+<div class="md:col-span-1">
+<div class="bg-primary-container p-2 rounded-lg flex items-center justify-center h-12 w-fit mb-4"><img alt="Vraj Chem Impex LLP Logo" class="h-full w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzVGg3WElDz-1aQV-E4JIhITL2bkn37U-fwpGyd33kCfDQIRGCH8_kYjmix9SEHpcJyCw3TW3yW1a0T5B40oV0BzjwDgURI5WinkDKBO82r7u3dyN2kAxVqfbv2x4IM4B5AV3cjY67JueUPgUl_UbZ3T8qoBpQb6vfoaTsmKrqrY-qL7HJwOsCEupUPS0SxSrTqZ6FVU26qkTewNJp12KEeGAKBkL8KaSxh6tUBhr68iEipMcViAtXVkN9CIhprXdxecc"/></div>
+<p class="font-body-sm text-body-sm opacity-80">
+                © 2024 Vraj Chem Impex LLP. Kandivali West, Mumbai. All Rights Reserved.
+            </p>
+</div>
+<div class="md:col-span-3 grid grid-cols-2 sm:grid-cols-3 gap-6">
+<a class="font-label-caps text-label-caps text-on-primary-fixed-variant opacity-80 hover:text-tertiary-fixed transition-colors cursor-pointer" href="#">Privacy Policy</a>
+<a class="font-label-caps text-label-caps text-on-primary-fixed-variant opacity-80 hover:text-tertiary-fixed transition-colors cursor-pointer" href="#">Terms of Service</a>
+<a class="font-label-caps text-label-caps text-on-primary-fixed-variant opacity-80 hover:text-tertiary-fixed transition-colors cursor-pointer" href="#">FDA Licenses</a>
+<a class="font-label-caps text-label-caps text-on-primary-fixed-variant opacity-80 hover:text-tertiary-fixed transition-colors cursor-pointer" href="#">Cold Chain SOP</a>
+<a class="font-label-caps text-label-caps text-on-primary-fixed-variant opacity-80 hover:text-tertiary-fixed transition-colors cursor-pointer" href="#">Contact Support</a>
+</div>
+</footer>
+<script>
+        // Simple drag and drop visual feedback
+        const dropZone = document.getElementById('drop-zone');
+        const fileInput = document.getElementById('file_upload');
+
+        ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+            dropZone.addEventListener(eventName, preventDefaults, false);
+        });
+
+        function preventDefaults (e) {
+            e.preventDefault();
+            e.stopPropagation();
+        }
+
+        ['dragenter', 'dragover'].forEach(eventName => {
+            dropZone.addEventListener(eventName, highlight, false);
+        });
+
+        ['dragleave', 'drop'].forEach(eventName => {
+            dropZone.addEventListener(eventName, unhighlight, false);
+        });
+
+        function highlight(e) {
+            dropZone.classList.add('bg-surface-container', 'border-primary');
+        }
+
+        function unhighlight(e) {
+            dropZone.classList.remove('bg-surface-container', 'border-primary');
+        }
+
+        dropZone.addEventListener('drop', handleDrop, false);
+
+        function handleDrop(e) {
+            let dt = e.dataTransfer;
+            let files = dt.files;
+            if(files.length > 0) {
+                 fileInput.files = files;
+                 // Update visual to show file selected (minimal implementation)
+                 dropZone.querySelector('p').textContent = `Selected: ${files[0].name}`;
+            }
+        }
+    </script>
+</body></html>

@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Acetone - Vraj Chem Impex LLP</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@600;700&amp;family=Inter:wght@400;500;700&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "tertiary": "#735c00",
+                      "primary-fixed": "#d8e2ff",
+                      "on-secondary-fixed-variant": "#005235",
+                      "error": "#ba1a1a",
+                      "surface-dim": "#cbdbf5",
+                      "surface-container-lowest": "#ffffff",
+                      "surface-variant": "#d3e4fe",
+                      "inverse-on-surface": "#eaf1ff",
+                      "surface-tint": "#465e8e",
+                      "on-tertiary": "#ffffff",
+                      "secondary-fixed": "#8df7c1",
+                      "surface-container-high": "#dce9ff",
+                      "surface-bright": "#f8f9ff",
+                      "on-primary-fixed-variant": "#2d4674",
+                      "surface": "#f8f9ff",
+                      "secondary": "#006c47",
+                      "tertiary-fixed-dim": "#e9c349",
+                      "on-tertiary-container": "#4f3e00",
+                      "on-surface-variant": "#44474f",
+                      "inverse-surface": "#213145",
+                      "secondary-container": "#8af5be",
+                      "on-primary-container": "#7c94c8",
+                      "primary-container": "#0f2c59",
+                      "on-tertiary-fixed-variant": "#574500",
+                      "on-secondary-container": "#00714b",
+                      "secondary-fixed-dim": "#71dba6",
+                      "on-primary": "#ffffff",
+                      "on-surface": "#0b1c30",
+                      "outline": "#747780",
+                      "surface-container-highest": "#d3e4fe",
+                      "on-tertiary-fixed": "#241a00",
+                      "outline-variant": "#c4c6d0",
+                      "on-secondary": "#ffffff",
+                      "surface-container": "#e5eeff",
+                      "on-error-container": "#93000a",
+                      "on-secondary-fixed": "#002113",
+                      "on-error": "#ffffff",
+                      "inverse-primary": "#aec7fd",
+                      "tertiary-container": "#cca830",
+                      "background": "#f8f9ff",
+                      "on-background": "#0b1c30",
+                      "primary": "#00173b",
+                      "surface-container-low": "#eff4ff",
+                      "on-primary-fixed": "#001a41",
+                      "tertiary-fixed": "#ffe088",
+                      "primary-fixed-dim": "#aec7fd",
+                      "error-container": "#ffdad6"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "gutter": "24px",
+                      "data-row-height": "48px",
+                      "margin-mobile": "16px",
+                      "unit": "4px",
+                      "container-max": "1440px",
+                      "margin-desktop": "48px"
+              },
+              "fontFamily": {
+                      "headline-md": [
+                              "Hanken Grotesk"
+                      ],
+                      "label-caps": [
+                              "Inter"
+                      ],
+                      "headline-sm": [
+                              "Hanken Grotesk"
+                      ],
+                      "body-sm": [
+                              "Inter"
+                      ],
+                      "display-lg": [
+                              "Hanken Grotesk"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "data-mono": [
+                              "JetBrains Mono"
+                      ]
+              },
+              "fontSize": {
+                      "headline-md": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "label-caps": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-sm": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-sm": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "56px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "data-mono": [
+                              "13px",
+                              {
+                                      "lineHeight": "16px",
+                                      "fontWeight": "500"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-md text-body-md antialiased min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<header class="bg-surface dark:bg-inverse-surface border-b border-outline-variant dark:border-outline docked full-width top-0 z-50">
+<div class="flex justify-between items-center w-full px-margin-desktop max-w-container-max mx-auto h-data-row-height">
+<div class="flex items-center gap-gutter"><a class="flex items-center bg-primary p-2 rounded" href="#"><img alt="Vraj Chem Impex LLP" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaNH4bUczO4Aj6uLRmbWOLo1RmcoYXjaf6bgLr6WGEmtF5BdF3QjdG2gj5e1Q2jt2MDH32gajg5dMPLfbPNfbTn5NNsA4_yDfA0fbil4SX1oYgJCwDzVSSCoVRqP4yOHSOS9yxWyLETbzmB4nOMagcmN_m4c_8OsL-VsNn4HobXg8ZBOOwAudxlwz2RuL0HwSo-uduXBh5Cuf6qQe3kWLIq84Syrlj5XE_OiNVhJENJJEjfpJhN4v3KFd4gLR-WcdYpok"/></a></div>
+<nav class="hidden md:flex gap-6 h-full items-center">
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors duration-200 font-label-caps text-label-caps h-full flex items-center" href="#">Categories</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors duration-200 font-label-caps text-label-caps h-full flex items-center" href="#">APIs</a>
+<a class="text-secondary dark:text-secondary-fixed-dim border-b-2 border-secondary dark:border-secondary-fixed-dim pb-1 font-label-caps text-label-caps h-full flex items-center" href="#">Industrial Chemicals</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors duration-200 font-label-caps text-label-caps h-full flex items-center" href="#">Compliance</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors duration-200 font-label-caps text-label-caps h-full flex items-center" href="#">About Us</a>
+</nav>
+<div class="flex items-center gap-4">
+<div class="relative hidden lg:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-sm">search</span>
+<input class="pl-9 pr-4 py-1.5 bg-surface-container border border-outline-variant rounded text-sm focus:border-primary focus:ring-1 focus:ring-primary w-64 text-on-surface-variant" placeholder="Search catalog..." type="text"/>
+</div>
+<button class="hidden lg:block text-primary dark:text-primary-fixed-dim font-label-caps text-label-caps scale-95 active:scale-90 transition-transform">GSTIN/LLPIN Utility</button>
+<button class="bg-primary text-on-primary px-4 py-1.5 rounded font-label-caps text-label-caps hover:bg-opacity-90 scale-95 active:scale-90 transition-transform">Request a Quote</button>
+</div>
+</div>
+</header>
+<main class="flex-grow flex flex-col items-center w-full px-margin-mobile md:px-margin-desktop py-8 max-w-container-max mx-auto gap-8">
+<!-- Breadcrumb -->
+<div class="w-full text-on-surface-variant font-body-sm text-body-sm flex items-center gap-2">
+<a class="hover:text-primary transition-colors" href="#">Home</a>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+<a class="hover:text-primary transition-colors" href="#">Categories</a>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+<a class="hover:text-primary transition-colors" href="#">Industrial Chemicals</a>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+<span class="text-on-surface font-medium">Acetone</span>
+</div>
+<div class="w-full grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Left: Packaging & Actions -->
+<div class="lg:col-span-3 flex flex-col gap-6">
+<div class="bg-surface-container-lowest border border-outline-variant rounded-lg p-4 flex items-center justify-center aspect-square shadow-sm relative overflow-hidden group">
+<img class="w-full h-full object-contain mix-blend-multiply opacity-90 group-hover:scale-105 transition-transform duration-500" data-alt="A highly detailed, professional product shot of Human Insulin Injection vials in a sterile laboratory setting. The lighting is clinical, bright, and cool-toned, emphasizing safety and medical compliance. The background is a crisp, modern light-mode white with subtle blue undertones, reflecting a corporate pharmaceutical aesthetic. Deep blacks and pristine whites dominate, ensuring high contrast." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAA4fGjMasuf4CDBrSLEUtUIR5e-jWzHHHwWuWypAb-JkwJAs4u_aC1x5wobR2wFkKC7yVMn5sqxCeiVh0yrmfzopkZZmmCfR5VemZq2XDJ6hLGpbUJXQ4o-yHiwQFk6H0mzTonbNA-1fG_sVoQnWaLyOy5t4cV5f9pSrI2MgjZSZanIYBs4X6YDrRPW9IQzAMDHbWBfjd5CCRhjr8UIzJD-43fSIWo2QktkunN75wTKf6Vra5A02juag"/>
+<div class="absolute top-2 left-2 flex gap-2">
+<span class="bg-[#fce8e6] text-[#c5221f] font-label-caps text-label-caps px-2 py-1 rounded border border-[#c5221f]/20 flex items-center gap-1 shadow-sm"><span class="w-2 h-2 rounded-full bg-[#c5221f]"></span> Flammable Liquid</span>
+</div>
+</div>
+<div class="flex flex-col gap-3">
+<button class="w-full border border-outline-variant hover:border-primary text-primary bg-surface-container-lowest py-2.5 rounded font-label-caps text-label-caps flex items-center justify-center gap-2 transition-colors">
+<span class="material-symbols-outlined text-[18px]">description</span> Download SDS
+                    </button>
+<button class="w-full border border-outline-variant hover:border-primary text-primary bg-surface-container-lowest py-2.5 rounded font-label-caps text-label-caps flex items-center justify-center gap-2 transition-colors">
+<span class="material-symbols-outlined text-[18px]">science</span> Download TDS
+                    </button>
+<button class="w-full bg-surface-container text-on-surface py-2.5 rounded font-label-caps text-label-caps flex items-center justify-center gap-2 hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[18px]">request_page</span> Request COA
+                    </button>
+</div>
+</div>
+<!-- Middle: Details -->
+<div class="lg:col-span-5 flex flex-col gap-8">
+<div>
+<div class="flex items-start justify-between gap-4 mb-2">
+<h1 class="font-headline-md text-headline-md text-primary">Acetone</h1>
+</div>
+<p class="text-on-surface-variant font-body-lg text-body-lg mb-6">High-purity acetone for industrial and commercial applications.</p>
+<div class="grid grid-cols-2 gap-y-4 gap-x-8 mb-8 border-t border-b border-outline-variant py-6">
+<div>
+<span class="text-on-surface-variant font-label-caps text-label-caps block mb-1">CAS Number</span>
+<span class="font-body-md text-body-md font-medium">67-64-1</span>
+</div>
+<div>
+<span class="text-on-surface-variant font-label-caps text-label-caps block mb-1">Grade</span>
+<span class="bg-surface-dim text-on-surface px-2 py-0.5 rounded text-sm">Technical/Industrial</span>
+</div>
+<div>
+<span class="text-on-surface-variant font-label-caps text-label-caps block mb-1">Purity</span>
+<span class="font-data-mono text-data-mono text-primary font-bold">99.5%</span>
+</div>
+</div>
+</div>
+<!-- Tabs -->
+<div class="flex flex-col">
+<div class="flex border-b border-outline-variant gap-8 overflow-x-auto no-scrollbar">
+<button class="pb-2 border-b-2 border-primary text-primary font-label-caps text-label-caps whitespace-nowrap">Overview</button>
+<button class="pb-2 border-b-2 border-transparent text-on-surface-variant hover:text-primary font-label-caps text-label-caps whitespace-nowrap transition-colors">Specifications</button>
+<button class="pb-2 border-b-2 border-transparent text-on-surface-variant hover:text-primary font-label-caps text-label-caps whitespace-nowrap transition-colors">Packaging &amp; Handling</button>
+<button class="pb-2 border-b-2 border-transparent text-on-surface-variant hover:text-primary font-label-caps text-label-caps whitespace-nowrap transition-colors">Safety &amp; Regulatory</button>
+</div>
+<div class="py-6 font-body-sm text-body-sm text-on-surface-variant space-y-4">
+<p class="">Widely used industrial solvent with applications in paints, coatings, plastics, and pharmaceutical manufacturing.</p>
+</div>
+</div>
+</div>
+<!-- Right: RFQ Sidebar -->
+<div class="lg:col-span-4">
+<div class="bg-surface-container-lowest border border-outline-variant rounded-lg p-6 shadow-sm sticky top-24">
+<h3 class="font-headline-sm text-headline-sm text-primary mb-6 border-b border-outline-variant pb-4">Wholesale RFQ</h3>
+<form class="space-y-4">
+<div>
+<label class="block font-body-sm text-body-sm text-on-surface-variant mb-1">Required Quantity (Kg/Liters/Tons)</label>
+<input class="w-full border border-outline-variant rounded bg-surface focus:border-primary focus:ring-1 focus:ring-primary px-3 py-2 font-data-mono text-data-mono" placeholder="e.g., 10,000 Liters" type="text"/>
+</div>
+<div>
+<label class="block font-body-sm text-body-sm text-on-surface-variant mb-1">Packaging Type</label>
+<select class="w-full border border-outline-variant rounded bg-surface focus:border-primary focus:ring-1 focus:ring-primary px-3 py-2 font-body-sm text-body-sm">
+<option>Drums (200L)</option>
+<option>IBC Totes (1000L)</option>
+<option>ISO Tanks</option>
+</select>
+</div>
+<div>
+<label class="block font-body-sm text-body-sm text-on-surface-variant mb-1">Target Delivery Date</label>
+<input class="w-full border border-outline-variant rounded bg-surface focus:border-primary focus:ring-1 focus:ring-primary px-3 py-2 font-body-sm text-body-sm" type="date"/>
+</div>
+<div class="pt-4">
+<button class="w-full bg-tertiary-container text-on-tertiary-container hover:bg-tertiary hover:text-on-tertiary font-headline-sm text-headline-sm py-3 rounded shadow-sm transition-colors duration-200" type="button">
+                                Send Wholesale Inquiry
+                            </button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-primary dark:bg-primary-container full-width bottom-0 mt-auto border-t border-outline-variant">
+<div class="w-full py-12 px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter max-w-container-max mx-auto">
+<div class="flex flex-col gap-4 col-span-1 md:col-span-2">
+<div class="bg-primary-container p-2 rounded w-fit mb-4"><img alt="Vraj Chem Impex LLP" class="h-10 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-yufSLm_LfHPynCI_w2LjzIfsoEPKkMTPlSt20V5YQtmxI_Z8DgmktTlTpzu4K8Z8aHB7JvV1pZpy24S4rxkxLqBvueCBVyPULSiF29KoPzJ9gMiPYOKskxb2ZktSiwn3dXI6W-fMkw7a8LcI5n0sOszssRlwodsJ0tYuLVtSTcT6v56aymtDz-VaVYfp68cjtQkhnFzh0Vo5mxn58Az6QcY8X7nPnK3bYBAWBuPxYbLHYNfkyno86TtZ5XjUlIw_2M0"/></div>
+<p class="font-body-sm text-body-sm text-on-primary-fixed-variant opacity-80 max-w-sm">
+                    Premium Pharmaceutical Wholesale &amp; Chemical Distribution. Ensuring compliance, quality, and rigorous cold-chain integrity across the supply chain.
+                </p>
+<span class="font-body-sm text-body-sm text-on-primary-fixed-variant opacity-80 mt-4">© 2024 Vraj Chem Impex LLP. Kandivali West, Mumbai. All Rights Reserved.</span>
+</div>
+<div class="flex flex-col gap-3">
+<a class="font-label-caps text-label-caps text-on-primary-fixed-variant opacity-80 hover:text-tertiary-fixed transition-colors cursor-pointer" href="#">Privacy Policy</a>
+<a class="font-label-caps text-label-caps text-on-primary-fixed-variant opacity-80 hover:text-tertiary-fixed transition-colors cursor-pointer" href="#">Terms of Service</a>
+<a class="font-label-caps text-label-caps text-on-primary-fixed-variant opacity-80 hover:text-tertiary-fixed transition-colors cursor-pointer" href="#">FDA Licenses</a>
+</div>
+<div class="flex flex-col gap-3">
+<a class="font-label-caps text-label-caps text-on-primary-fixed-variant opacity-80 hover:text-tertiary-fixed transition-colors cursor-pointer" href="#">Cold Chain SOP</a>
+<a class="font-label-caps text-label-caps text-on-primary-fixed-variant opacity-80 hover:text-tertiary-fixed transition-colors cursor-pointer" href="#">Contact Support</a>
+</div>
+</div>
+</footer>
+</body></html>

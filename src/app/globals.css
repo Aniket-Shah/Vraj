@@ -1,0 +1,576 @@
+@import "tailwindcss";
+
+/* The Stitch export is design reference, not application source. Without this,
+   Tailwind scans its mockup markup and emits utilities nothing on the site uses. */
+@source not "../../stitch_vraj_chem_pharma_platform";
+
+/* ---------------------------------------------------------------------------
+   Clinical Authority — token values copied from the Stitch export so the build
+   matches the approved screens exactly.
+
+   Colour roles:
+     primary           #00173b  headings, footer ground
+     primary-container #0f2c59  header bar, category icons
+     secondary         #006c47  status, compliance, nav hover
+     tertiary          #735c00  RFQ conversion path and nothing else
+     error             #ba1a1a  validation failures only
+   --------------------------------------------------------------------------- */
+
+@theme {
+  /* Surfaces */
+  --color-bg: #f8f9ff;
+  --color-surface: #f8f9ff;
+  --color-surface-bright: #f8f9ff;
+  --color-surface-lowest: #ffffff;
+  --color-surface-low: #eff4ff;
+  --color-surface-mid: #e5eeff;
+  --color-surface-high: #dce9ff;
+  --color-surface-variant: #d3e4fe;
+  --color-surface-dim: #cbdbf5;
+
+  /* Ink */
+  --color-text: #0b1c30;
+  --color-muted: #44474f;
+  --color-outline: #747780;
+  --color-border: #c4c6d0;
+
+  /* Primary */
+  --color-primary: #00173b;
+  --color-primary-fg: #ffffff;
+  --color-primary-container: #0f2c59;
+  --color-primary-fixed: #d8e2ff;
+  --color-primary-fixed-variant: #2d4674;
+  --color-primary-soft: #7c94c8;
+
+  /* Secondary — status and compliance */
+  --color-accent: #006c47;
+  --color-accent-fg: #ffffff;
+  --color-accent-soft: #8af5be;
+
+  /* Tertiary — RFQ conversion path only */
+  --color-gold: #735c00;
+  --color-gold-fg: #ffffff;
+  --color-gold-hover: #cca830;
+  --color-gold-hover-fg: #4f3e00;
+  --color-gold-soft: #ffe088;
+
+  /* Error */
+  --color-error: #ba1a1a;
+  --color-error-soft: #ffdad6;
+  --color-error-fg: #93000a;
+
+  /* Aliases used by shared components */
+  --color-header: #0f2c59;
+  --color-header-fg: #ffffff;
+  --color-menu: #ffffff;
+  --color-footer: #00173b;
+  --color-inset: #eff4ff;
+  --color-field: #f8f9ff;
+  --color-scrim: rgba(11, 28, 48, 0.55);
+  --color-soft: rgba(15, 44, 89, 0.1);
+  --color-highlight: #006c47;
+}
+
+/* Non-colour design values. These generate no utilities, so they live outside
+   @theme and are read directly with var() or arbitrary-value syntax. */
+:root {
+  /* Type scale — Stitch values, exact */
+  --fs-display-lg: 48px;
+  --lh-display-lg: 56px;
+  --fs-headline-md: 32px;
+  --lh-headline-md: 40px;
+  --fs-headline-sm: 24px;
+  --lh-headline-sm: 32px;
+  --fs-body-lg: 18px;
+  --lh-body-lg: 28px;
+  --fs-body-md: 16px;
+  --lh-body-md: 24px;
+  --fs-body-sm: 14px;
+  --lh-body-sm: 20px;
+  --fs-data: 13px;
+  --lh-data: 16px;
+  --fs-label: 12px;
+  --lh-label: 16px;
+
+  /* 4px rhythm */
+  --s-1: 0.5rem;
+  --s-2: 1rem;
+  --s-3: 1.5rem;
+  --s-4: 2rem;
+  --s-6: 3rem;
+  --s-8: 4rem;
+  --s-12: 5rem;
+
+  --gutter: 24px;
+  --margin-mobile: 16px;
+  --margin-desktop: 48px;
+  --container-max: 1440px;
+  --data-row-height: 48px;
+
+  --d-fast: 200ms;
+  --d-base: 300ms;
+  --ease-out: cubic-bezier(0.2, 0, 0, 1);
+
+  /* Shape language — Stitch config, not Tailwind defaults */
+  --radius: 0.125rem;
+  --radius-lg: 0.25rem;
+  --radius-xl: 0.5rem;
+  --radius-full: 0.75rem;
+
+  --shadow-sm: 0 1px 2px rgba(15, 44, 89, 0.06);
+  --shadow-md: 0 4px 12px rgba(15, 44, 89, 0.08);
+}
+
+/* Element defaults live in @layer base so Tailwind utilities (text-white,
+   font-*, etc.) win over them — unlayered rules would otherwise beat every
+   utility regardless of specificity. */
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-body), system-ui, sans-serif;
+    font-size: var(--fs-body-md);
+    line-height: var(--lh-body-md);
+    min-height: 100vh;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display), system-ui, sans-serif;
+    color: var(--color-primary);
+    margin: 0;
+    text-wrap: balance;
+  }
+
+  h1 {
+    font-size: clamp(2rem, 1.4rem + 2.4vw, var(--fs-display-lg));
+    line-height: 1.16;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  h2 {
+    font-size: clamp(1.75rem, 1.4rem + 1.4vw, var(--fs-headline-md));
+    line-height: 1.25;
+    font-weight: 600;
+  }
+
+  h3 {
+    font-size: var(--fs-headline-sm);
+    line-height: var(--lh-headline-sm);
+    font-weight: 600;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  button,
+  input,
+  select,
+  textarea {
+    font: inherit;
+    color: inherit;
+  }
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Component classes live in @layer components so per-instance utilities
+   (p-4, pt-0, pl-9, border-l-4 …) override them. Unlayered, they beat every
+   utility regardless of specificity, and the override silently does nothing. */
+@layer components {
+  /* ---------- layout ---------- */
+
+  .container {
+    width: 100%;
+    max-width: var(--container-max);
+    margin-inline: auto;
+    padding-inline: var(--margin-mobile);
+  }
+
+  @media (min-width: 768px) {
+    .container {
+      padding-inline: var(--margin-desktop);
+    }
+  }
+
+  .section {
+    padding-block: var(--s-6);
+  }
+
+  /* Desktop keeps the approved 64px rhythm; a phone screen cannot afford it. */
+  @media (min-width: 768px) {
+    .section {
+      padding-block: var(--s-8);
+    }
+  }
+
+  .grid-auto {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
+    gap: var(--gutter);
+  }
+
+  /* ---------- type ---------- */
+
+  .label-caps {
+    font-size: var(--fs-label);
+    line-height: var(--lh-label);
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  .eyebrow {
+    color: var(--color-muted);
+    font-size: var(--fs-label);
+    line-height: var(--lh-label);
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  .data {
+    font-family: var(--font-mono), ui-monospace, monospace;
+    font-size: var(--fs-data);
+    line-height: var(--lh-data);
+    font-weight: 500;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .body-lg {
+    font-size: var(--fs-body-lg);
+    line-height: var(--lh-body-lg);
+  }
+
+  .body-sm {
+    font-size: var(--fs-body-sm);
+    line-height: var(--lh-body-sm);
+  }
+
+  .prose-lite {
+    color: var(--color-muted);
+    font-size: var(--fs-body-sm);
+    line-height: var(--lh-body-lg);
+  }
+
+  .muted {
+    color: var(--color-muted);
+  }
+
+  /* ---------- buttons ---------- */
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--s-1);
+    border: 1px solid transparent;
+    border-radius: var(--radius);
+    padding: 0.75rem 1.5rem;
+    font-size: var(--fs-label);
+    line-height: var(--lh-label);
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: var(--shadow-sm);
+    transition: background var(--d-fast) var(--ease-out), color var(--d-fast) var(--ease-out),
+      border-color var(--d-fast) var(--ease-out);
+  }
+
+  /* Tertiary gold is the conversion path and nothing else. */
+  .btn-rfq {
+    background: var(--color-gold);
+    color: var(--color-gold-fg);
+  }
+
+  .btn-rfq:hover {
+    background: var(--color-gold-hover);
+    color: var(--color-gold-hover-fg);
+  }
+
+  .btn-primary {
+    background: var(--color-primary-container);
+    color: var(--color-primary-fg);
+  }
+
+  .btn-primary:hover {
+    background: var(--color-primary);
+  }
+
+  .btn-outline {
+    background: transparent;
+    border-color: var(--color-outline);
+    color: var(--color-primary);
+  }
+
+  .btn-outline:hover {
+    background: var(--color-surface-variant);
+  }
+
+  .btn:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+  }
+
+  /* Large submit inside RFQ cards uses headline type, per the approved screens. */
+  .btn-submit {
+    width: 100%;
+    font-family: var(--font-display), system-ui, sans-serif;
+    font-size: var(--fs-headline-sm);
+    line-height: var(--lh-headline-sm);
+    font-weight: 600;
+    letter-spacing: 0;
+    text-transform: none;
+    padding: 0.75rem 1.5rem;
+  }
+
+  /* ---------- surfaces ---------- */
+
+  .panel {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    transition: box-shadow var(--d-fast) var(--ease-out);
+  }
+
+  .card:hover {
+    box-shadow: var(--shadow-md);
+  }
+
+  .icon-tile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 9999px;
+    background: color-mix(in srgb, var(--color-primary-container) 10%, transparent);
+    color: var(--color-primary-container);
+    transition: transform var(--d-fast) var(--ease-out);
+  }
+
+  .card:hover .icon-tile {
+    transform: scale(1.1);
+  }
+
+  /* ---------- badges and chips ---------- */
+
+  .pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: max-content;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-full);
+    background: var(--color-surface-high);
+    padding: 0.25rem 0.75rem;
+    color: var(--color-muted);
+    font-size: var(--fs-label);
+    line-height: var(--lh-label);
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    border-radius: var(--radius);
+    background: var(--color-surface-variant);
+    color: var(--color-primary);
+    padding: 0.25rem 0.6rem;
+    font-size: var(--fs-body-sm);
+    font-weight: 500;
+  }
+
+  .badge-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    border-radius: var(--radius);
+    background: color-mix(in srgb, var(--color-accent) 12%, transparent);
+    color: var(--color-accent);
+    padding: 0.2rem 0.5rem;
+    font-size: var(--fs-label);
+    line-height: var(--lh-label);
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  .badge-neutral {
+    display: inline-flex;
+    align-items: center;
+    border-radius: var(--radius);
+    background: var(--color-surface-variant);
+    color: var(--color-muted);
+    padding: 0.2rem 0.5rem;
+    font-size: var(--fs-label);
+    line-height: var(--lh-label);
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  /* ---------- forms ---------- */
+
+  .input {
+    width: 100%;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    background: var(--color-surface-bright);
+    color: var(--color-text);
+    padding: 0.5rem 0.75rem;
+    font-size: var(--fs-body-sm);
+    line-height: var(--lh-body-sm);
+    min-height: 2.5rem;
+    transition: border-color var(--d-fast) var(--ease-out), box-shadow var(--d-fast) var(--ease-out);
+  }
+
+  .input::placeholder {
+    color: var(--color-outline);
+  }
+
+  .input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 1px var(--color-primary);
+  }
+
+  .input-search {
+    border-radius: var(--radius-full);
+    padding: 0.75rem 1rem 0.75rem 2.5rem;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .label {
+    display: block;
+    color: var(--color-muted);
+    font-size: var(--fs-body-sm);
+    line-height: var(--lh-body-sm);
+    margin-bottom: 0.25rem;
+  }
+
+  /* Forms that nest the control inside its label still need the 4px gap the
+     approved screens show between label text and field. */
+  .label > .input {
+    margin-top: 0.25rem;
+  }
+
+  .form-error {
+    color: var(--color-error);
+    font-size: var(--fs-body-sm);
+    font-weight: 600;
+  }
+
+  .form-success {
+    color: var(--color-accent);
+    font-size: var(--fs-body-sm);
+    font-weight: 600;
+  }
+
+  /* Touch sizing. 14px controls make iOS Safari zoom the whole page on focus, and a
+     40px control is under the 44px touch target, so phones get both bumped. Desktop
+     keeps the approved Stitch proportions untouched. */
+  @media (max-width: 767px) {
+    .input {
+      font-size: var(--fs-body-md);
+      line-height: var(--lh-body-md);
+      min-height: 2.75rem;
+    }
+
+    .btn {
+      min-height: 2.75rem;
+      padding-inline: 1.25rem;
+    }
+
+    .btn-submit {
+      font-size: var(--fs-body-lg);
+      line-height: var(--lh-body-lg);
+      padding-block: 0.875rem;
+    }
+  }
+
+  /* ---------- data rows ---------- */
+
+  .spec-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--s-2);
+    min-height: var(--data-row-height);
+    border-bottom: 1px solid var(--color-border);
+    padding-block: 0.5rem;
+  }
+
+  .spec-row:last-child {
+    border-bottom: 0;
+  }
+
+  /* ---------- scrollbars ---------- */
+
+  .custom-scroll {
+    overflow-y: auto;
+  }
+
+  .custom-scroll::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .custom-scroll::-webkit-scrollbar-thumb {
+    background: var(--color-border);
+    border-radius: 3px;
+  }
+
+  .scrollbar-none {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

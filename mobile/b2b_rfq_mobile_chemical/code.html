@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Vraj Chem Impex - Mobile RFQ Form</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700&amp;family=Inter:wght@400;500;700&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-primary": "#aec7fd",
+                        "surface": "#f8f9ff",
+                        "secondary-container": "#8af5be",
+                        "surface-container-highest": "#d3e4fe",
+                        "on-surface-variant": "#44474f",
+                        "on-error-container": "#93000a",
+                        "error-container": "#ffdad6",
+                        "tertiary-fixed-dim": "#e9c349",
+                        "tertiary-container": "#cca830",
+                        "primary-container": "#0f2c59",
+                        "inverse-surface": "#213145",
+                        "surface-tint": "#465e8e",
+                        "surface-container": "#e5eeff",
+                        "error": "#ba1a1a",
+                        "outline-variant": "#c4c6d0",
+                        "inverse-on-surface": "#eaf1ff",
+                        "secondary-fixed": "#8df7c1",
+                        "secondary": "#006c47",
+                        "outline": "#747780",
+                        "on-primary": "#ffffff",
+                        "on-primary-fixed": "#001a41",
+                        "surface-container-high": "#dce9ff",
+                        "tertiary-fixed": "#ffe088",
+                        "on-secondary-fixed-variant": "#005235",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "on-background": "#0b1c30",
+                        "on-primary-container": "#7c94c8",
+                        "primary-fixed-dim": "#aec7fd",
+                        "on-tertiary-container": "#4f3e00",
+                        "surface-variant": "#d3e4fe",
+                        "primary": "#00173b",
+                        "on-secondary-container": "#00714b",
+                        "secondary-fixed-dim": "#71dba6",
+                        "surface-dim": "#cbdbf5",
+                        "on-surface": "#0b1c30",
+                        "tertiary": "#735c00",
+                        "on-tertiary-fixed-variant": "#574500",
+                        "primary-fixed": "#d8e2ff",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-fixed": "#002113",
+                        "surface-container-low": "#eff4ff",
+                        "on-tertiary-fixed": "#241a00",
+                        "surface-bright": "#f8f9ff",
+                        "background": "#f8f9ff",
+                        "on-primary-fixed-variant": "#2d4674",
+                        "on-error": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-desktop": "48px",
+                        "container-max": "1440px",
+                        "gutter": "24px",
+                        "data-row-height": "48px",
+                        "margin-mobile": "16px",
+                        "unit": "4px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "display-lg": ["Hanken Grotesk"],
+                        "label-caps": ["Inter"],
+                        "data-mono": ["JetBrains Mono"],
+                        "headline-md": ["Hanken Grotesk"],
+                        "body-sm": ["Inter"],
+                        "headline-sm": ["Hanken Grotesk"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700" }],
+                        "data-mono": ["13px", { "lineHeight": "16px", "fontWeight": "500" }],
+                        "headline-md": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "headline-sm": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .input-field {
+            @apply w-full bg-surface-container-lowest border border-outline-variant rounded px-4 py-3 font-body-md text-on-surface focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors duration-200;
+        }
+        .input-label {
+            @apply block font-body-sm text-on-surface-variant mb-unit;
+        }
+        .step-indicator {
+            @apply w-8 h-8 rounded-full flex items-center justify-center font-body-sm text-body-sm font-bold;
+        }
+        .step-active {
+            @apply bg-primary text-on-primary;
+        }
+        .step-inactive {
+            @apply bg-surface-variant text-on-surface-variant;
+        }
+        .step-line {
+            @apply flex-1 h-[2px] bg-surface-variant mx-2;
+        }
+        .step-line-active {
+            @apply bg-primary;
+        }
+        
+        /* Hide steps initially */
+        .form-step { display: none; }
+        .form-step.active { display: block; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen pb-24 md:pb-0">
+<!-- TopAppBar (Transactional - Hidden on Web, shown on mobile for context but modified as a transactional header) -->
+<header class="bg-primary dark:bg-primary-container font-headline-sm text-headline-sm flex justify-between items-center px-margin-mobile h-12 w-full fixed top-0 z-50 border-b border-outline-variant flat no shadows md:hidden">
+<div class="flex items-center gap-2">
+<button class="text-on-primary dark:text-on-primary-container p-1 rounded-full hover:bg-primary-container/20 transition-colors">
+<span class="material-symbols-outlined" data-icon="close">close</span>
+</button>
+<h1 class="font-headline-sm text-headline-sm font-bold text-on-primary dark:text-on-primary-container">Request For Quote</h1>
+</div>
+</header>
+<main class="pt-16 px-margin-mobile md:px-margin-desktop md:pt-margin-desktop max-w-2xl mx-auto">
+<!-- Trust Banner -->
+<div class="bg-surface-container-low rounded-lg p-4 mb-6 flex items-center justify-between shadow-sm border border-outline-variant/50">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary" data-icon="verified" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="font-body-sm text-body-sm text-on-surface">Quality Assured</span>
+</div>
+<div class="h-4 w-[1px] bg-outline-variant"></div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="local_shipping" style="font-variation-settings: 'FILL' 1;">local_shipping</span>
+<span class="font-body-sm text-body-sm text-on-surface">Rapid Dispatch</span>
+</div>
+</div>
+<!-- Progress Indicator -->
+<div class="flex items-center justify-between mb-8">
+<div class="flex items-center w-full">
+<div class="flex flex-col items-center">
+<div class="step-indicator step-active" id="step1-indicator">1</div>
+<span class="font-label-caps text-label-caps text-on-surface mt-1">Company</span>
+</div>
+<div class="step-line" id="line1"></div>
+<div class="flex flex-col items-center">
+<div class="step-indicator step-inactive" id="step2-indicator">2</div>
+<span class="font-label-caps text-label-caps text-on-surface-variant mt-1">Chemicals</span>
+</div>
+<div class="step-line" id="line2"></div>
+<div class="flex flex-col items-center">
+<div class="step-indicator step-inactive" id="step3-indicator">3</div>
+<span class="font-label-caps text-label-caps text-on-surface-variant mt-1">Review</span>
+</div>
+</div>
+</div>
+<!-- Form Container -->
+<form class="bg-surface-container-lowest rounded-xl p-6 shadow-sm border border-outline-variant/30" id="rfq-form">
+<!-- Step 1: Company Details -->
+<div class="form-step active" id="step1">
+<h2 class="font-headline-sm text-headline-sm text-primary mb-6">Company Information</h2>
+<div class="space-y-4">
+<div>
+<label class="input-label" for="company-name">Company Name *</label>
+<input class="input-field" id="company-name" placeholder="e.g. Apex Pharmaceuticals Ltd." required="" type="text"/>
+</div>
+<div>
+<label class="input-label" for="gstin">GSTIN *</label>
+<input class="input-field font-data-mono text-data-mono uppercase" id="gstin" placeholder="e.g. 27AABCU9603R1ZM" required="" type="text"/>
+</div>
+<div>
+<label class="input-label" for="contact-person">Contact Person</label>
+<input class="input-field" id="contact-person" placeholder="Full Name" type="text"/>
+</div>
+<div>
+<label class="input-label" for="email">Email Address *</label>
+<input class="input-field" id="email" placeholder="procurement@company.com" required="" type="email"/>
+</div>
+</div>
+<button class="w-full mt-8 bg-primary text-on-primary font-headline-sm text-headline-sm font-bold py-3 rounded-lg flex items-center justify-center gap-2 hover:bg-primary/90 transition-colors" onclick="nextStep(2)" type="button">
+                    Next: Chemical Requirements
+                    <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<!-- Step 2: Chemical Details -->
+<div class="form-step" id="step2">
+<h2 class="font-headline-sm text-headline-sm text-primary mb-6">Requirement Details</h2>
+<div class="space-y-4">
+<div>
+<label class="input-label" for="chemical-name">Chemical Name / Category *</label>
+<input class="input-field" id="chemical-name" placeholder="e.g. Isopropyl Alcohol (IPA)" required="" type="text"/>
+</div>
+<div>
+<label class="input-label" for="cas-no">CAS Number (Optional)</label>
+<input class="input-field font-data-mono text-data-mono" id="cas-no" placeholder="e.g. 67-63-0" type="text"/>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div>
+<label class="input-label" for="volume">Required Volume *</label>
+<input class="input-field" id="volume" placeholder="0" required="" type="number"/>
+</div>
+<div>
+<label class="input-label" for="unit">Unit *</label>
+<select class="input-field" id="unit">
+<option value="mt">Metric Tons (MT)</option>
+<option value="drums">Drums</option>
+<option value="liters">Liters</option>
+<option value="kg">Kilograms</option>
+</select>
+</div>
+</div>
+<div>
+<label class="input-label" for="purity">Required Purity Grade</label>
+<select class="input-field" id="purity">
+<option value="pharma">Pharma Grade (IP/BP/USP)</option>
+<option value="ar">Analytical Reagent (AR)</option>
+<option value="industrial">Industrial Grade</option>
+</select>
+</div>
+<div class="mt-6 p-4 border border-dashed border-outline-variant rounded-lg bg-surface flex flex-col items-center justify-center cursor-pointer hover:bg-surface-variant/50 transition-colors">
+<span class="material-symbols-outlined text-primary mb-2" data-icon="upload_file">upload_file</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-center">Upload Purchase Order (Optional)</span>
+<span class="font-label-caps text-label-caps text-outline mt-1">PDF, JPG, PNG up to 5MB</span>
+</div>
+</div>
+<div class="flex gap-4 mt-8">
+<button class="w-1/3 bg-surface-container-high text-on-surface font-body-md text-body-md py-3 rounded-lg flex items-center justify-center hover:bg-surface-variant transition-colors" onclick="prevStep(1)" type="button">
+                        Back
+                    </button>
+<button class="w-2/3 bg-primary text-on-primary font-headline-sm text-headline-sm font-bold py-3 rounded-lg flex items-center justify-center gap-2 hover:bg-primary/90 transition-colors" onclick="nextStep(3)" type="button">
+                        Review RFQ
+                    </button>
+</div>
+</div>
+<!-- Step 3: Review -->
+<div class="form-step" id="step3">
+<h2 class="font-headline-sm text-headline-sm text-primary mb-6">Review &amp; Submit</h2>
+<div class="bg-surface rounded-lg p-4 mb-4 border border-outline-variant/30">
+<h3 class="font-body-sm text-body-sm text-on-surface-variant mb-2 border-b border-outline-variant/30 pb-1">Company</h3>
+<div class="font-body-md text-body-md text-on-surface font-medium" id="review-company">Apex Pharmaceuticals Ltd.</div>
+<div class="font-data-mono text-data-mono text-on-surface-variant text-sm mt-1" id="review-gstin">GSTIN: 27AABCU9603R1ZM</div>
+</div>
+<div class="bg-surface rounded-lg p-4 mb-6 border border-outline-variant/30">
+<h3 class="font-body-sm text-body-sm text-on-surface-variant mb-2 border-b border-outline-variant/30 pb-1">Requirement</h3>
+<div class="font-body-md text-body-md text-on-surface font-medium" id="review-chemical">Isopropyl Alcohol (IPA)</div>
+<div class="flex justify-between mt-2">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Volume:</span>
+<span class="font-data-mono text-data-mono text-on-surface font-medium">5 MT</span>
+</div>
+<div class="flex justify-between mt-1">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Grade:</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Pharma Grade (IP/BP/USP)</span>
+</div>
+</div>
+<div class="flex items-start gap-2 mb-8">
+<input class="mt-1 rounded text-primary focus:ring-primary h-4 w-4 border-outline-variant" id="terms" type="checkbox"/>
+<label class="font-body-sm text-body-sm text-on-surface-variant" for="terms">
+                        I confirm that the details provided are accurate and agree to the <a class="text-primary underline" href="#">terms of service</a> for bulk inquiry processing.
+                    </label>
+</div>
+<div class="flex gap-4">
+<button class="w-1/3 bg-surface-container-high text-on-surface font-body-md text-body-md py-3 rounded-lg flex items-center justify-center hover:bg-surface-variant transition-colors" onclick="prevStep(2)" type="button">
+                        Edit
+                    </button>
+<button class="w-2/3 bg-tertiary-container text-on-tertiary-container font-headline-sm text-headline-sm font-bold py-3 rounded-lg flex items-center justify-center gap-2 hover:bg-tertiary-fixed transition-colors shadow-sm" onclick="submitForm()" type="button">
+                        Submit RFQ
+                        <span class="material-symbols-outlined" data-icon="send">send</span>
+</button>
+</div>
+</div>
+</form>
+</main>
+<script>
+        function nextStep(step) {
+            document.querySelectorAll('.form-step').forEach(el => el.classList.remove('active'));
+            document.getElementById('step' + step).classList.add('active');
+            
+            // Update indicators
+            for (let i = 1; i <= 3; i++) {
+                const indicator = document.getElementById('step' + i + '-indicator');
+                if (indicator) {
+                    if (i <= step) {
+                        indicator.classList.remove('step-inactive');
+                        indicator.classList.add('step-active');
+                    } else {
+                        indicator.classList.remove('step-active');
+                        indicator.classList.add('step-inactive');
+                    }
+                }
+            }
+            
+            // Update lines
+            for(let i=1; i<3; i++){
+                const line = document.getElementById('line' + i);
+                if(line) {
+                    if(i < step) {
+                        line.classList.add('step-line-active');
+                    } else {
+                        line.classList.remove('step-line-active');
+                    }
+                }
+            }
+            
+            // Populate review if going to step 3
+            if(step === 3) {
+                const company = document.getElementById('company-name').value;
+                const gstin = document.getElementById('gstin').value;
+                const chemical = document.getElementById('chemical-name').value;
+                
+                if(company) document.getElementById('review-company').textContent = company;
+                if(gstin) document.getElementById('review-gstin').textContent = "GSTIN: " + gstin;
+                if(chemical) document.getElementById('review-chemical').textContent = chemical;
+            }
+            
+            window.scrollTo(0,0);
+        }
+
+        function prevStep(step) {
+            nextStep(step);
+        }
+        
+        function submitForm() {
+            alert('RFQ Submitted successfully. Our team will contact you shortly.');
+            // Reset to step 1 for demo purposes
+            document.getElementById('rfq-form').reset();
+            nextStep(1);
+        }
+    </script>
+</body></html>
